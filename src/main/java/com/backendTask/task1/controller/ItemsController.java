@@ -22,7 +22,6 @@ public class ItemsController {
     @GetMapping("/items")
     public ResponseEntity<RestResponseDto<List<ItemsDto>>> getItems(){
         RestResponseDto<List<ItemsDto>> getItems = itemsService.getItems();
-        System.out.println("Returned Data: " + getItems.getData());  // 디버깅
         return new ResponseEntity<>(getItems, getItems.getStatus());
     }
 
