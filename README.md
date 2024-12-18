@@ -28,6 +28,17 @@
 
 ---
 
+### 정답:
+![image](https://github.com/user-attachments/assets/f37bc55b-df90-4eb5-8d96-6aa477e34453)
+
+![image](https://github.com/user-attachments/assets/d5b872e4-0c3b-487c-b1ea-3f5834939a8a)
+
+![image](https://github.com/user-attachments/assets/4cea9017-9c3e-4fbd-be11-2cc4a1aa13f3)
+
+![image](https://github.com/user-attachments/assets/42b7dd08-4911-4074-8081-3d6d26a703c3)
+
+![image](https://github.com/user-attachments/assets/e348da43-658f-41fc-973a-ff93032bbe40)
+
 ## 과제 2: 사용자 인증 시스템
 
 ### 설명:
