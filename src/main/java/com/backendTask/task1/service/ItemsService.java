@@ -48,13 +48,19 @@ public class ItemsService {
      * 아이템 등록
      */
     public RestResponseDto<ItemsDto> createItem(ItemsDto itemsDto){
-        Items savedItem = itemsRepository.save(ItemsDto.toEntity(itemsDto));
 
-        return RestResponseDto.<ItemsDto>builder()
-                .code(ITEM_CREATE_SUCCESS.getHttpStatus().value())
-                .status(ITEM_CREATE_SUCCESS.getHttpStatus())
-                .message(ITEM_CREATE_SUCCESS.getMessage())
-                .build();
+       try{
+           Items savedItem = itemsRepository.save(ItemsDto.toEntity(itemsDto));
+
+           return RestResponseDto.<ItemsDto>builder()
+                   .code(ITEM_CREATE_SUCCESS.getHttpStatus().value())
+                   .status(ITEM_CREATE_SUCCESS.getHttpStatus())
+                   .message(ITEM_CREATE_SUCCESS.getMessage())
+                   .build();
+       }catch (Exception e){
+           throw new CustomException(ITEM_CREATE_FAILURE);
+       }
+
     }
 
     /**
@@ -62,7 +68,7 @@ public class ItemsService {
      */
     public RestResponseDto<ItemsDto> updateItem(Long id, ItemsDto itemsDto){
         Optional<Items> findItems = itemsRepository.findById(id);
-        Items items = findItems.orElseThrow(() -> new CustomException(ITEM_LIST_FETCH_FAILURE));
+        Items items = findItems.orElseThrow(() -> new CustomException(ITEM_UPDATE_FAILURE));
 
         //변경감지 데이터 update
         items.changeItem(itemsDto.getName(), itemsDto.getDescription());
@@ -78,6 +84,11 @@ public class ItemsService {
      * 아이템 삭제
      */
     public RestResponseDto<ItemsDto> deleteItem(Long id){
+
+        //삭제할 아이템 존재하는지 확인
+        Optional<Items> findItems = itemsRepository.findById(id);
+        Items items = findItems.orElseThrow(() -> new CustomException(ITEM_DELETE_FAILURE));
+
         itemsRepository.deleteById(id);
 
         return RestResponseDto.<ItemsDto>builder()
