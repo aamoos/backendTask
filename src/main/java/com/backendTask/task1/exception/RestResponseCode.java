@@ -37,9 +37,6 @@ public enum RestResponseCode {
     // 사용자 관련 오류
     USER_NOT_FOUND(HttpStatus.NOT_FOUND, "해당하는 정보의 사용자를 찾을 수 없습니다."),
 
-    // 중복된 데이터 오류
-    DUPLICATE_RESOURCE(HttpStatus.CONFLICT, "데이터가 이미 존재합니다."),
-
     //과제 2번 코드//
     //회원가입 성공
     MEMBER_CREATE_SUCCESS(HttpStatus.CREATED, "회원가입이 성공하였습니다."),
@@ -58,14 +55,7 @@ public enum RestResponseCode {
     INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "내부 서버 오류입니다."),
 
     // 401 UNAUTHORIZED: 인증 실패
-    UNAUTHORIZED(HttpStatus.UNAUTHORIZED, "인증 실패. 유효하지 않은 토큰입니다."),
-
-    // JWT 토큰 관련 오류 코드 추가
-    INVALID_JWT_TOKEN(HttpStatus.UNAUTHORIZED, "유효하지 않은 JWT 토큰입니다."),
-    EXPIRED_JWT_TOKEN(HttpStatus.UNAUTHORIZED, "만료된 JWT 토큰입니다."),
-    UNSUPPORTED_JWT_TOKEN(HttpStatus.UNAUTHORIZED, "지원되지 않는 JWT 토큰입니다."),
-    EMPTY_JWT_CLAIMS(HttpStatus.BAD_REQUEST, "JWT claims 문자열이 비어 있습니다.");
-
+    UNAUTHORIZED(HttpStatus.UNAUTHORIZED, "인증 실패. 유효하지 않은 토큰입니다.");
 
     private final HttpStatus httpStatus;
     private final String message;
