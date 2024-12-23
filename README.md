@@ -58,7 +58,11 @@
 
 ## 정답:
 ![image](https://github.com/user-attachments/assets/00b66255-a99a-48a4-9c33-5fba2491e233)
+
+![image](https://github.com/user-attachments/assets/3a686d71-3e44-403f-b413-6d8dcee3e316)
+
 ![image](https://github.com/user-attachments/assets/87efe2b3-1e12-4a5f-9331-7ebd1ddda0b3)
+
 ![image](https://github.com/user-attachments/assets/fbba3a41-7452-4396-b305-ffc109178054)
 
 ---
