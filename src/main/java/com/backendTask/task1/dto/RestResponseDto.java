@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 
+import java.util.List;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -19,4 +21,6 @@ public class RestResponseDto<T> {
     private String message;
     private T data;
 
+    public RestResponseDto(int value, List<String> errorMessages) {
+    }
 }

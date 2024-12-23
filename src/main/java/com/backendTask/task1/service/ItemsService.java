@@ -8,11 +8,8 @@ import com.backendTask.task1.repository.ItemsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-
 import static com.backendTask.task1.exception.RestResponseCode.*;
 
 @Service
@@ -50,7 +47,7 @@ public class ItemsService {
     public RestResponseDto<ItemsDto> createItem(ItemsDto itemsDto){
 
        try{
-           Items savedItem = itemsRepository.save(ItemsDto.toEntity(itemsDto));
+           itemsRepository.save(ItemsDto.toEntity(itemsDto));
 
            return RestResponseDto.<ItemsDto>builder()
                    .code(ITEM_CREATE_SUCCESS.getHttpStatus().value())
@@ -87,7 +84,7 @@ public class ItemsService {
 
         //삭제할 아이템 존재하는지 확인
         Optional<Items> findItems = itemsRepository.findById(id);
-        Items items = findItems.orElseThrow(() -> new CustomException(ITEM_DELETE_FAILURE));
+        findItems.orElseThrow(() -> new CustomException(ITEM_DELETE_FAILURE));
 
         itemsRepository.deleteById(id);
 
