@@ -46,7 +46,7 @@ public enum RestResponseCode {
     MEMBER_CREATE_FAILURE(HttpStatus.BAD_REQUEST, "회원가입이 실패했습니다."),
     MEMBER_DUPLICATE_FAILURE(HttpStatus.CONFLICT, "회원이 이미 존재합니다."),
 
-    MEMBER_PROFILE_SUCCESS(HttpStatus.CREATED, "회원 프로필이 정상적으로 조회되었습니다."),
+    MEMBER_PROFILE_SUCCESS(HttpStatus.OK, "회원 프로필이 정상적으로 조회되었습니다."),
 
     //400
     BAD_REQUEST(HttpStatus.BAD_REQUEST, "정상적인 요청이 아닙니다."),
