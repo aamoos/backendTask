@@ -1,6 +1,7 @@
 package com.backendTask.task1.exception;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -11,37 +12,40 @@ import java.security.SignatureException;
 @ControllerAdvice
 @Slf4j
 public class CustomExceptionHandler {
+
+    // Handle CustomException
     @ExceptionHandler(CustomException.class)
-    protected ResponseEntity<ErrorResponseEntity> handleCustomException(CustomException e) {
-        return ErrorResponseEntity.toResponseEntity(e.getErrorCode());
+    public ResponseEntity<ErrorResponseEntity> handleCustomException(CustomException ex) {
+        // Log the custom exception
+        log.error("Custom exception occurred: {}", ex.getMessage());
+        // Return a custom error response with the exception message and BAD_REQUEST status
+        return ErrorResponseEntity.toResponseEntity(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
-    // JWT 서명 불일치 오류 처리
+    // Handle JWT SignatureException
     @ExceptionHandler(SignatureException.class)
     protected ResponseEntity<ErrorResponseEntity> handleJwtSignatureException(SignatureException e) {
-        // 로그에 JWT 서명 불일치 오류 메시지 기록
+        // Log the JWT signature error
         log.error("JWT Signature Mismatch: {}", e.getMessage());
-
-        // SignatureException 발생 시 401 Unauthorized 반환
-        // 여기에 더 구체적인 에러 메시지나 처리를 추가할 수 있습니다.
-        return ErrorResponseEntity.toResponseEntity(RestResponseCode.INVALID_JWT_TOKEN);
+        // Return a custom error response for invalid JWT token with Unauthorized status
+        return ErrorResponseEntity.toResponseEntity("Invalid JWT token: " + e.getMessage(), HttpStatus.UNAUTHORIZED);
     }
 
-    // Handling 405 Method Not Allowed
+    // Handle Method Not Allowed (405)
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     protected ResponseEntity<ErrorResponseEntity> handleMethodNotAllowed(HttpRequestMethodNotSupportedException e) {
-        // Log the error
+        // Log the Method Not Allowed error
         log.error("Method Not Allowed: {}", e.getMessage());
-        // Return a custom error response for 405
-        return ErrorResponseEntity.toResponseEntity(RestResponseCode.METHOD_NOT_ALLOWED);
+        // Return a custom error response for 405 Method Not Allowed
+        return ErrorResponseEntity.toResponseEntity("Method not allowed: " + e.getMessage(), HttpStatus.METHOD_NOT_ALLOWED);
     }
 
-    // Handling 500 Internal Server Error
+    // Handle Internal Server Error (500)
     @ExceptionHandler(Exception.class)
     protected ResponseEntity<ErrorResponseEntity> handleInternalServerError(Exception e) {
-        // Log the error
+        // Log the general exception
         log.error("Internal Server Error: {}", e.getMessage());
-        // Return a custom error response for 500
-        return ErrorResponseEntity.toResponseEntity(RestResponseCode.INTERNAL_SERVER_ERROR);
+        // Return a custom error response for 500 Internal Server Error
+        return ErrorResponseEntity.toResponseEntity("Internal server error: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

@@ -1,14 +1,9 @@
 package com.backendTask.task2.dto;
 
-import com.backendTask.task2.entity.Member;
-import com.backendTask.task2.entity.RoleType;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
-
-import java.util.List;
 
 //로그인시 사용하는 dto
 public class LoginDto {

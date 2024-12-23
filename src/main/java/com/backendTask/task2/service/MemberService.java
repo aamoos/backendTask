@@ -68,17 +68,17 @@ public class MemberService {
                     .message(errorMessage)
                     .build();
         }
-        
+
+        //기존에 회원이 있을경우
+        Optional<Member> existingMember = memberRepository.findByEmail(request.getEmail());
+
+        // 기존 회원이 있을 경우 예외를 던짐
+        if (existingMember.isPresent()) {
+            throw new CustomException(RestResponseCode.MEMBER_DUPLICATE_FAILURE);
+        }
+
         //요청이 정상적인 경우
         try{
-            //기존에 회원이 있을경우
-            Optional<Member> existingMember = memberRepository.findByEmail(request.getEmail());
-
-            // 기존 회원이 있을 경우 예외를 던짐
-            if (existingMember.isPresent()) {
-                throw new CustomException(RestResponseCode.MEMBER_DUPLICATE_FAILURE);
-            }
-
             //패스워드 encoder
             request.setPassword(encoder.encode(request.getPassword()));
             memberRepository.save(MemberDto.Request.toEntity(request));
