@@ -14,11 +14,8 @@ public class CustomExceptionHandler {
 
     // Handle CustomException
     @ExceptionHandler(CustomException.class)
-    public ResponseEntity<ErrorResponseEntity> handleCustomException(CustomException ex) {
-        // Log the custom exception
-        log.error("Custom exception occurred: {}", ex.getMessage());
-        // Return a custom error response with the exception message and BAD_REQUEST status
-        return ErrorResponseEntity.toResponseEntity(ex.getMessage(), HttpStatus.BAD_REQUEST);
+    protected ResponseEntity<ErrorResponseEntity> handleCustomException(CustomException e) {
+        return ErrorResponseEntity.toResponseEntity(e.getErrorCode());
     }
 
     // Handle JWT SignatureException
