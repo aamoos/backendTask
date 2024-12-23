@@ -56,7 +56,14 @@
 - 비밀번호는 최소 8자 이상, 대문자와 숫자를 포함해야 한다는 규칙을 검증.
 - 각 요청에 대한 유효성 검증 필수.
 
+## 정답:
+![image](https://github.com/user-attachments/assets/00b66255-a99a-48a4-9c33-5fba2491e233)
+![image](https://github.com/user-attachments/assets/87efe2b3-1e12-4a5f-9331-7ebd1ddda0b3)
+![image](https://github.com/user-attachments/assets/fbba3a41-7452-4396-b305-ffc109178054)
+
 ---
+
+
 
 ## 과제 3: 데이터베이스 모델링 및 CRUD 작업
 
