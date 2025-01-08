@@ -10,7 +10,6 @@ import com.backendTask.task2.entity.Member;
 import com.backendTask.task2.jwt.JwtUtil;
 import com.backendTask.task2.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -97,7 +96,7 @@ public class MemberService {
      *  회원 프로필 조회
      */
     @Transactional(readOnly = true)
-    public RestResponseDto<MemberDto.Response> profile(@RequestParam String token){
+    public RestResponseDto<MemberDto.Response> profile(String token){
 
         Member profile = memberRepository.findById(jwtUtil.getUserId(token)).orElseThrow(() -> new CustomException(USER_NOT_FOUND));
 

@@ -2,8 +2,11 @@ package com.backendTask.task2.entity;
 
 import com.backendTask.task2.dto.CustomUserInfoDto;
 import com.backendTask.task2.dto.MemberDto;
+import com.backendTask.task3.entity.Orders;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "MEMBER")
@@ -30,6 +33,9 @@ public class Member {
     @Enumerated(EnumType.STRING)
     @Column(name = "ROLE", nullable = false)
     private RoleType role;
+
+    @OneToMany(mappedBy = "member")  // Order 엔티티에서 "member" 필드와 연관
+    private List<Orders> orders;
 
     public static CustomUserInfoDto customUserToDto(Member member){
         return CustomUserInfoDto.builder()

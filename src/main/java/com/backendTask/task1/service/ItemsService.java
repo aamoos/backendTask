@@ -64,17 +64,21 @@ public class ItemsService {
      * 아이템 수정
      */
     public RestResponseDto<ItemsDto> updateItem(Long id, ItemsDto itemsDto){
-        Optional<Items> findItems = itemsRepository.findById(id);
-        Items items = findItems.orElseThrow(() -> new CustomException(ITEM_UPDATE_FAILURE));
+        try{
+            Optional<Items> findItems = itemsRepository.findById(id);
+            Items items = findItems.orElseThrow(() -> new CustomException(ITEM_LIST_FETCH_FAILURE));
 
-        //변경감지 데이터 update
-        items.changeItem(itemsDto.getName(), itemsDto.getDescription());
+            //변경감지 데이터 update
+            items.changeItem(itemsDto.getName(), itemsDto.getDescription());
 
-        return RestResponseDto.<ItemsDto>builder()
-                .code(ITEM_UPDATE_SUCCESS.getHttpStatus().value())
-                .status(ITEM_UPDATE_SUCCESS.getHttpStatus())
-                .message(ITEM_UPDATE_SUCCESS.getMessage())
-                .build();
+            return RestResponseDto.<ItemsDto>builder()
+                    .code(ITEM_UPDATE_SUCCESS.getHttpStatus().value())
+                    .status(ITEM_UPDATE_SUCCESS.getHttpStatus())
+                    .message(ITEM_UPDATE_SUCCESS.getMessage())
+                    .build();
+        }catch (Exception e){
+            throw new CustomException(ITEM_UPDATE_FAILURE);
+        }
     }
 
     /**
@@ -82,17 +86,21 @@ public class ItemsService {
      */
     public RestResponseDto<ItemsDto> deleteItem(Long id){
 
-        //삭제할 아이템 존재하는지 확인
-        Optional<Items> findItems = itemsRepository.findById(id);
-        findItems.orElseThrow(() -> new CustomException(ITEM_DELETE_FAILURE));
+        try{
+            //삭제할 아이템 존재하는지 확인
+            Optional<Items> findItems = itemsRepository.findById(id);
+            findItems.orElseThrow(() -> new CustomException(ITEM_LIST_FETCH_FAILURE));
 
-        itemsRepository.deleteById(id);
+            itemsRepository.deleteById(id);
 
-        return RestResponseDto.<ItemsDto>builder()
-                .code(ITEM_DELETE_SUCCESS.getHttpStatus().value())
-                .status(ITEM_DELETE_SUCCESS.getHttpStatus())
-                .message(ITEM_DELETE_SUCCESS.getMessage())
-                .build();
+            return RestResponseDto.<ItemsDto>builder()
+                    .code(ITEM_DELETE_SUCCESS.getHttpStatus().value())
+                    .status(ITEM_DELETE_SUCCESS.getHttpStatus())
+                    .message(ITEM_DELETE_SUCCESS.getMessage())
+                    .build();
+        }catch (Exception e){
+            throw new CustomException(ITEM_DELETE_FAILURE);
+        }
     }
 
 }

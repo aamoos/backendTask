@@ -1,10 +1,9 @@
 package com.backendTask.task2.controller;
 
 import com.backendTask.task1.dto.RestResponseDto;
-import com.backendTask.task1.exception.CustomException;
-import com.backendTask.task1.exception.RestResponseCode;
 import com.backendTask.task2.dto.LoginDto;
 import com.backendTask.task2.dto.MemberDto;
+import com.backendTask.task2.jwt.JwtUtil;
 import com.backendTask.task2.service.MemberService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 public class MemberController {
 
     private final MemberService memberService;
+    private final JwtUtil jwtUtil;
 
     /**
      * 회원가입
@@ -46,17 +46,7 @@ public class MemberController {
      */
     @GetMapping("/profile")
     public ResponseEntity<RestResponseDto<MemberDto.Response>> profile(@RequestHeader(HttpHeaders.AUTHORIZATION) String authorizationHeader){
-        RestResponseDto<MemberDto.Response> profile = memberService.profile(extractTokenFromHeader(authorizationHeader));
+        RestResponseDto<MemberDto.Response> profile = memberService.profile(jwtUtil.extractTokenFromHeader(authorizationHeader));
         return new ResponseEntity<>(profile, profile.getStatus());
-    }
-
-    // 헤더에서 JWT 토큰 추출
-    private String extractTokenFromHeader(String authorizationHeader) {
-        // Authorization 헤더에서 Bearer <token> 형식에서 토큰 부분만 추출
-        if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
-            return authorizationHeader.substring(7); // "Bearer "를 제외한 토큰 부분만 추출
-        } else {
-            throw new CustomException(RestResponseCode.INVALID_AUTH_TOKEN);
-        }
     }
 }

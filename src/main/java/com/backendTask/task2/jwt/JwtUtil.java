@@ -1,5 +1,7 @@
 package com.backendTask.task2.jwt;
 
+import com.backendTask.task1.exception.CustomException;
+import com.backendTask.task1.exception.RestResponseCode;
 import com.backendTask.task2.dto.CustomUserInfoDto;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
@@ -107,6 +109,16 @@ public class JwtUtil {
             return Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(accessToken).getBody();
         } catch (ExpiredJwtException e) {
             return e.getClaims();
+        }
+    }
+
+    // 헤더에서 JWT 토큰 추출
+    public String extractTokenFromHeader(String authorizationHeader) {
+        // Authorization 헤더에서 Bearer <token> 형식에서 토큰 부분만 추출
+        if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
+            return authorizationHeader.substring(7); // "Bearer "를 제외한 토큰 부분만 추출
+        } else {
+            throw new CustomException(RestResponseCode.INVALID_AUTH_TOKEN);
         }
     }
 }

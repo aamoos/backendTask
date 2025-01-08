@@ -45,6 +45,21 @@ public enum RestResponseCode {
 
     MEMBER_PROFILE_SUCCESS(HttpStatus.OK, "회원 프로필이 정상적으로 조회되었습니다."),
 
+    //과제 3번 코드
+    //주문 성공
+    ORDERS_CREATE_SUCCESS(HttpStatus.CREATED, "주문이 성공하였습니다."),
+    ORDERS_CREATE_FAILURE(HttpStatus.BAD_REQUEST, "주문이 실패했습니다."),
+
+    ORDERS_NOT_FOUND(HttpStatus.NOT_FOUND, "해당하는 정보의 주문을 찾을 수 없습니다."),
+
+    ORDERS_READ_SUCCESS(HttpStatus.OK, "로그인한 사용자 주문목록이 정상적으로 조회되었습니다."),
+
+    ORDERS_UPDATE_SUCCESS(HttpStatus.OK, "주문 수정 성공"),
+    ORDERS_UPDATE_FAILURE(HttpStatus.BAD_REQUEST, "주문 수정 실패"),
+
+    ORDERS_DELETE_SUCCESS(HttpStatus.OK, "주문 삭제 성공"),
+    ORDERS_DELETE_FAILURE(HttpStatus.BAD_REQUEST, "주문 삭제 실패"),
+
     //400
     BAD_REQUEST(HttpStatus.BAD_REQUEST, "정상적인 요청이 아닙니다."),
 
