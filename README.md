@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/5ce2f643-0167-4231-b02b-9a4dd37985c7)## CHAT GPT 백엔드 과제
+## CHAT GPT 백엔드 과제
 
 ## 목차
 1. [과제 1: 간단한 RESTful API 구현](#과제-1-간단한-restful-api-구현)
