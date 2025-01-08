@@ -1,4 +1,4 @@
-## CHAT GPT 백엔드 과제
+![image](https://github.com/user-attachments/assets/5ce2f643-0167-4231-b02b-9a4dd37985c7)## CHAT GPT 백엔드 과제
 
 ## 목차
 1. [과제 1: 간단한 RESTful API 구현](#과제-1-간단한-restful-api-구현)
@@ -83,6 +83,26 @@
 - 모델 설계 및 CRUD 구현.
 - 기본적인 데이터 유효성 검증.
 - API에서 데이터를 JSON 형식으로 응답.
+
+## 정답:
+
+![image](https://github.com/user-attachments/assets/23e9363f-8d65-4299-98f7-5520c258ea00)
+
+![image](https://github.com/user-attachments/assets/b5c73378-58f7-4f00-88c2-890190467d60)
+
+![image](https://github.com/user-attachments/assets/d0c343fd-7f16-4065-8a25-e2b63d5589ef)
+
+![image](https://github.com/user-attachments/assets/fc743212-7f94-4e6b-bcea-1c8e7dc7ca5d)
+
+![image](https://github.com/user-attachments/assets/3e4875f2-a301-46d6-a38d-3fd9505183b9)
+
+![image](https://github.com/user-attachments/assets/5fceeeb5-1b80-4cf3-8d71-530d4a70a3fe)
+
+
+
+
+
+
 
 ---
 
