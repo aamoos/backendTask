@@ -1,8 +1,6 @@
 package com.backendTask.task3.controller;
 
-import com.backendTask.task1.dto.ItemsDto;
 import com.backendTask.task1.dto.RestResponseDto;
-import com.backendTask.task2.dto.MemberDto;
 import com.backendTask.task3.dto.OrdersDto;
 import com.backendTask.task3.service.OrdersService;
 import jakarta.validation.Valid;
@@ -11,7 +9,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController

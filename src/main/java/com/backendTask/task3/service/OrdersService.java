@@ -1,11 +1,7 @@
 package com.backendTask.task3.service;
 
-import com.backendTask.task1.dto.ItemsDto;
 import com.backendTask.task1.dto.RestResponseDto;
-import com.backendTask.task1.entity.Items;
 import com.backendTask.task1.exception.CustomException;
-import com.backendTask.task1.exception.RestResponseCode;
-import com.backendTask.task2.dto.MemberDto;
 import com.backendTask.task2.entity.Member;
 import com.backendTask.task2.jwt.JwtUtil;
 import com.backendTask.task2.repository.MemberRepository;
