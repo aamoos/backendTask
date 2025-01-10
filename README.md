@@ -166,7 +166,7 @@
 ## 정답:
 
 - 게시물 페이징 목록 조회
-- 게시물 페이징 목록 조회 부분은 보통 동적쿼리를 사용하기 떄문에 querydsl을 적용해서 구현하였습니다.
+- 위에 과제 3번까지 조회성 부분은 Spring Dta Jpa 이번 4번 과제 게시물 페이징 목록 조회 부분은 검색 부분은 구현안했으나 보통 동적쿼리를 사용하기 떄문에 querydsl을 적용해서 구현해보았습니다.
 - querydsl를 dto로 조회해올때 @QueryProjection 방식을 사용해서 조회되게 하였습니다.
 
 ![image](https://github.com/user-attachments/assets/7ca23f99-78f1-4ca7-a82a-684e0c8de5fa)
