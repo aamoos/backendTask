@@ -34,8 +34,10 @@
 - 간단한 메모리 저장소(예: JSON 파일 또는 메모리 DB)를 사용하여 아이템을 저장.
 ![image](https://github.com/user-attachments/assets/f37bc55b-df90-4eb5-8d96-6aa477e34453)
 
+- 아이템 생성 
 ![image](https://github.com/user-attachments/assets/d5b872e4-0c3b-487c-b1ea-3f5834939a8a)
 
+- 아이템 전체 목록 조회
 ![image](https://github.com/user-attachments/assets/4cea9017-9c3e-4fbd-be11-2cc4a1aa13f3)
 
 ![image](https://github.com/user-attachments/assets/42b7dd08-4911-4074-8081-3d6d26a703c3)
