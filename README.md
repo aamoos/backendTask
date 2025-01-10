@@ -129,17 +129,13 @@
 
 ![image](https://github.com/user-attachments/assets/23e9363f-8d65-4299-98f7-5520c258ea00)
 
-- 주문 목록 조회
+- 주문 목록 조회 (jwt Token을 Bearer Token에 넣어야됨)
 
 ![image](https://github.com/user-attachments/assets/b5c73378-58f7-4f00-88c2-890190467d60)
 
 - 주문 수정
 
 ![image](https://github.com/user-attachments/assets/d0c343fd-7f16-4065-8a25-e2b63d5589ef)
-
-- 로그인한 사용자의 전체 주문조회 (jwt Token을 Bearer Token에 넣어야됨)
-
-![image](https://github.com/user-attachments/assets/fc743212-7f94-4e6b-bcea-1c8e7dc7ca5d)
 
 - 주문 삭제
 
