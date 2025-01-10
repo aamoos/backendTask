@@ -37,7 +37,7 @@ public class PostsService {
 
 
     /**
-     * 아이템 조회
+     * 게시물 페이징 목록 조회
      */
     @Transactional(readOnly = true)
     public RestResponseDto<Page<PostsDto.Response>> getPosts(Pageable pageable) {
