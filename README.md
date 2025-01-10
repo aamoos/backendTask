@@ -99,8 +99,6 @@
 
 ![image](https://github.com/user-attachments/assets/fbba3a41-7452-4396-b305-ffc109178054)
 
-![image](https://github.com/user-attachments/assets/1925a25c-0641-4c49-bd7e-47d714932009)
-
 ---
 
 
