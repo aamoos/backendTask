@@ -3,14 +3,15 @@ package com.backendTask.task1.service;
 import com.backendTask.task1.dto.ItemsDto;
 import com.backendTask.task1.dto.RestResponseDto;
 import com.backendTask.task1.entity.Items;
-import com.backendTask.task1.exception.CustomException;
+import com.backendTask.exception.CustomException;
 import com.backendTask.task1.repository.ItemsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
-import static com.backendTask.task1.exception.RestResponseCode.*;
+
+import static com.backendTask.exception.RestResponseCode.*;
 
 @Service
 @Transactional

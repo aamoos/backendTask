@@ -1,4 +1,4 @@
-package com.backendTask.task1.exception;
+package com.backendTask.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

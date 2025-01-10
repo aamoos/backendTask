@@ -1,23 +1,26 @@
 package com.backendTask.task2.service;
 
+import com.backendTask.exception.CustomException;
+import com.backendTask.exception.RestResponseCode;
+import com.backendTask.jwt.JwtUtil;
 import com.backendTask.task1.dto.RestResponseDto;
-import com.backendTask.task1.exception.CustomException;
-import com.backendTask.task1.exception.RestResponseCode;
 import com.backendTask.task2.dto.CustomUserInfoDto;
 import com.backendTask.task2.dto.LoginDto;
 import com.backendTask.task2.dto.MemberDto;
 import com.backendTask.task2.entity.Member;
-import com.backendTask.task2.jwt.JwtUtil;
 import com.backendTask.task2.repository.MemberRepository;
+import com.backendTask.util.ValidationUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
+
 import java.util.Optional;
 import java.util.stream.Collectors;
-import static com.backendTask.task1.exception.RestResponseCode.*;
+
+import static com.backendTask.exception.RestResponseCode.*;
 
 @Service
 @RequiredArgsConstructor
@@ -54,16 +57,7 @@ public class MemberService {
         // 유효성 검사 오류가 있는 경우 처리
         if (bindingResult.hasErrors()) {
             // BindingResult에서 발생한 에러 메시지를 추출
-            String errorMessage = bindingResult.getAllErrors()
-                    .stream()
-                    .map(ObjectError::getDefaultMessage)
-                    .collect(Collectors.joining(", ")); // 에러 메시지들을 쉼표로 구분
-
-            return RestResponseDto.<MemberDto.Response>builder()
-                    .code(BAD_REQUEST.getHttpStatus().value())
-                    .status(BAD_REQUEST.getHttpStatus())
-                    .message(errorMessage)
-                    .build();
+            return ValidationUtil.validationCheck(bindingResult);
         }
 
         //기존에 회원이 있을경우
@@ -106,5 +100,4 @@ public class MemberService {
                 .data(Member.profileToDto(profile))
                 .build();
     }
-
 }

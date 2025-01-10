@@ -3,7 +3,7 @@ package com.backendTask.task2.controller;
 import com.backendTask.task1.dto.RestResponseDto;
 import com.backendTask.task2.dto.LoginDto;
 import com.backendTask.task2.dto.MemberDto;
-import com.backendTask.task2.jwt.JwtUtil;
+import com.backendTask.jwt.JwtUtil;
 import com.backendTask.task2.service.MemberService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

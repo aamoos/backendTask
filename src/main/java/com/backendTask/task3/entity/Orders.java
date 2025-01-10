@@ -23,7 +23,6 @@ public class Orders {
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
-    @NotBlank(message = "상품명은 필수 항목입니다.")
     private String productName;
 
     private LocalDateTime orderDate;

@@ -31,7 +31,8 @@ public class OrdersController {
      */
 
     @PostMapping("/orders/create")
-    public ResponseEntity<RestResponseDto<OrdersDto.Response>> createOrder(@RequestHeader(HttpHeaders.AUTHORIZATION) String authorizationHeader
+    public ResponseEntity<RestResponseDto<OrdersDto.Response>> createOrder(
+              @RequestHeader(HttpHeaders.AUTHORIZATION) String authorizationHeader
             , @Valid @RequestBody OrdersDto.Request request
             , BindingResult bindingResult){
         RestResponseDto<OrdersDto.Response> createOrders = ordersService.createOrders(authorizationHeader, request, bindingResult);
@@ -43,8 +44,12 @@ public class OrdersController {
      */
 
     @PutMapping("/orders/{id}")
-    public ResponseEntity<RestResponseDto<OrdersDto>> updateItem(@PathVariable("id") Long id, @RequestBody OrdersDto.Request request){
-        RestResponseDto<OrdersDto> updateOrders = ordersService.updateOrders(id, request);
+    public ResponseEntity<RestResponseDto<OrdersDto.Response>> updateItem(
+              @PathVariable("id") Long id
+            , @RequestHeader(HttpHeaders.AUTHORIZATION) String authorizationHeader
+            , @Valid @RequestBody OrdersDto.Request request
+            , BindingResult bindingResult){
+        RestResponseDto<OrdersDto.Response> updateOrders = ordersService.updateOrders(id, request, bindingResult);
         return new ResponseEntity<>(updateOrders, updateOrders.getStatus());
     }
 
@@ -53,8 +58,8 @@ public class OrdersController {
      */
 
     @DeleteMapping("/orders/{id}")
-    public ResponseEntity<RestResponseDto<OrdersDto>> deleteOrders(@PathVariable("id") Long id){
-        RestResponseDto<OrdersDto> deleteOrders = ordersService.deleteOrders(id);
+    public ResponseEntity<RestResponseDto<OrdersDto.Response>> deleteOrders(@PathVariable("id") Long id){
+        RestResponseDto<OrdersDto.Response> deleteOrders = ordersService.deleteOrders(id);
         return new ResponseEntity<>(deleteOrders, deleteOrders.getStatus());
     }
 

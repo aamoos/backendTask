@@ -1,4 +1,4 @@
-package com.backendTask.task1.exception;
+package com.backendTask.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -58,7 +58,24 @@ public enum RestResponseCode {
     ORDERS_UPDATE_FAILURE(HttpStatus.BAD_REQUEST, "주문 수정 실패"),
 
     ORDERS_DELETE_SUCCESS(HttpStatus.OK, "주문 삭제 성공"),
-    ORDERS_DELETE_FAILURE(HttpStatus.BAD_REQUEST, "주문 삭제 실패"),
+    ORDERS_DELETE_FAILURE(HttpStatus.OK, "주문 삭제 실패"),
+
+    //과제 4번 코드
+    POSTS_LIST_FETCH_SUCCESS(HttpStatus.OK, "게시판 목록 조회 성공"),
+
+    POSTS_CREATE_SUCCESS(HttpStatus.CREATED, "게시물 등록이 성공하였습니다."),
+    POSTS_CREATE_FAILURE(HttpStatus.BAD_REQUEST, "게시물 등록이 실패했습니다."),
+
+    POSTS_READ_FAILURE(HttpStatus.BAD_REQUEST, "게시판 조회 실패"),
+    POSTS_READ_SUCCESS(HttpStatus.OK, "게시판 상세 조회 성공"),
+
+    POSTS_NOT_FOUND(HttpStatus.NOT_FOUND, "해당하는 정보의 게시물을 찾을 수 없습니다."),
+
+    POSTS_UPDATE_SUCCESS(HttpStatus.OK, "게시판 수정 성공"),
+    POSTS_UPDATE_FAILURE(HttpStatus.BAD_REQUEST, "게시판 수정 실패"),
+
+    POSTS_DELETE_SUCCESS(HttpStatus.OK, "게시판 삭제 성공"),
+    POSTS_DELETE_FAILURE(HttpStatus.OK, "게시판 삭제 실패"),
 
     //400
     BAD_REQUEST(HttpStatus.BAD_REQUEST, "정상적인 요청이 아닙니다."),

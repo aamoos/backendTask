@@ -1,4 +1,4 @@
-package com.backendTask.task2.config;
+package com.backendTask.config;
 
 import com.backendTask.task2.dto.CustomUserInfoDto;
 import lombok.Getter;

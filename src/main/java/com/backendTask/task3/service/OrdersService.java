@@ -1,24 +1,23 @@
 package com.backendTask.task3.service;
 
+import com.backendTask.exception.CustomException;
+import com.backendTask.jwt.JwtUtil;
 import com.backendTask.task1.dto.RestResponseDto;
-import com.backendTask.task1.exception.CustomException;
 import com.backendTask.task2.entity.Member;
-import com.backendTask.task2.jwt.JwtUtil;
 import com.backendTask.task2.repository.MemberRepository;
 import com.backendTask.task3.dto.OrdersDto;
 import com.backendTask.task3.entity.Orders;
 import com.backendTask.task3.repository.OrdersRepository;
+import com.backendTask.util.ValidationUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
-import static com.backendTask.task1.exception.RestResponseCode.*;
+import static com.backendTask.exception.RestResponseCode.*;
 
 @Service
 @RequiredArgsConstructor
@@ -58,17 +57,7 @@ public class OrdersService {
 
         // 유효성 검사 오류가 있는 경우 처리
         if (bindingResult.hasErrors()) {
-            // BindingResult에서 발생한 에러 메시지를 추출
-            String errorMessage = bindingResult.getAllErrors()
-                    .stream()
-                    .map(ObjectError::getDefaultMessage)
-                    .collect(Collectors.joining(", ")); // 에러 메시지들을 쉼표로 구분
-
-            return RestResponseDto.<OrdersDto.Response>builder()
-                    .code(BAD_REQUEST.getHttpStatus().value())
-                    .status(BAD_REQUEST.getHttpStatus())
-                    .message(errorMessage)
-                    .build();
+            return ValidationUtil.validationCheck(bindingResult);
         }
 
         //요청이 정상적인 경우
@@ -94,7 +83,13 @@ public class OrdersService {
     /**
      * 주문 수정하기
      */
-    public RestResponseDto<OrdersDto> updateOrders(Long id, OrdersDto.Request request){
+    public RestResponseDto<OrdersDto.Response> updateOrders(Long id, OrdersDto.Request request, BindingResult bindingResult){
+
+        // 유효성 검사 오류가 있는 경우 처리
+        if (bindingResult.hasErrors()) {
+            return ValidationUtil.validationCheck(bindingResult);
+        }
+
         try{
             Optional<Orders> findOrders = ordersRepository.findById(id);
             Orders orders = findOrders.orElseThrow(() -> new CustomException(ORDERS_NOT_FOUND));
@@ -102,7 +97,7 @@ public class OrdersService {
             //변경감지 데이터 update
             orders.changeOrders(request.getProductName());
 
-            return RestResponseDto.<OrdersDto>builder()
+            return RestResponseDto.<OrdersDto.Response>builder()
                     .code(ORDERS_UPDATE_SUCCESS.getHttpStatus().value())
                     .status(ORDERS_UPDATE_SUCCESS.getHttpStatus())
                     .message(ORDERS_UPDATE_SUCCESS.getMessage())
@@ -115,7 +110,7 @@ public class OrdersService {
     /**
      * 주문 삭제하기
      */
-    public RestResponseDto<OrdersDto> deleteOrders(Long id){
+    public RestResponseDto<OrdersDto.Response> deleteOrders(Long id){
 
         try{
             //삭제할 아이템 존재하는지 확인
@@ -124,13 +119,13 @@ public class OrdersService {
 
             ordersRepository.deleteById(id);
 
-            return RestResponseDto.<OrdersDto>builder()
+            return RestResponseDto.<OrdersDto.Response>builder()
                     .code(ORDERS_DELETE_SUCCESS.getHttpStatus().value())
                     .status(ORDERS_DELETE_SUCCESS.getHttpStatus())
                     .message(ORDERS_DELETE_SUCCESS.getMessage())
                     .build();
         }catch (Exception e){
-            throw new CustomException(ORDERS_DELETE_SUCCESS);
+            throw new CustomException(ORDERS_DELETE_FAILURE);
         }
     }
 }

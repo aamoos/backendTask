@@ -1,4 +1,4 @@
-package com.backendTask.task1.exception;
+package com.backendTask.exception;
 
 import lombok.Builder;
 import lombok.Data;
