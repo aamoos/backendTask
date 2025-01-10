@@ -125,6 +125,8 @@
 
 ![image](https://github.com/user-attachments/assets/0abb8ddd-833c-4657-bb81-ef242da0d2a0)
 
+![image](https://github.com/user-attachments/assets/582e3c6a-7d53-4dd5-b3bd-95e014cdc611)
+
 - 주문 요청 api
 
 ![image](https://github.com/user-attachments/assets/23e9363f-8d65-4299-98f7-5520c258ea00)
