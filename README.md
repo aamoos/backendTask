@@ -120,6 +120,11 @@
 
 ## 정답:
 
+- 주문(Orders)와 고객(Member)를 @MnayToOne으로 연관관계 설정
+- why : 한명의 고객은 여러개의 주문을 할수 있기때문에
+![image](https://github.com/user-attachments/assets/0abb8ddd-833c-4657-bb81-ef242da0d2a0)
+
+
 ![image](https://github.com/user-attachments/assets/23e9363f-8d65-4299-98f7-5520c258ea00)
 
 ![image](https://github.com/user-attachments/assets/b5c73378-58f7-4f00-88c2-890190467d60)
