@@ -145,6 +145,8 @@
 
 ![image](https://github.com/user-attachments/assets/3e4875f2-a301-46d6-a38d-3fd9505183b9)
 
+- 주문 삭제후 다시 조회
+
 ![image](https://github.com/user-attachments/assets/5fceeeb5-1b80-4cf3-8d71-530d4a70a3fe)
 
 
