@@ -51,6 +51,10 @@
 
 ![image](https://github.com/user-attachments/assets/e348da43-658f-41fc-973a-ff93032bbe40)
 
+- 각 아이템은 id, name, description을 포함하며, id는 자동 증가하는 값으로 설정.
+
+![image](https://github.com/user-attachments/assets/cfe51133-43df-41c2-a8df-b91da5ebed15)
+
 ## 과제 2: 사용자 인증 시스템
 
 ### 설명:
