@@ -119,7 +119,7 @@
 ## 정답:
 
 - 주문(Orders)와 고객(Member)를 @MnayToOne으로 연관관계 설정 (@ManyToOne은 기본 fetch type가 Eager이기때문에 Lazy로 강제적으로 설정)
-- why : 한명의 고객은 여러개의 주문을 할수 있기때문에
+- why : 한명의 고객은 여러개의 주문을 할수 있기때문에, 기본적으로 모든 연관관계 타입은 Lazy로 설정으로 설계해야함
 
 ![image](https://github.com/user-attachments/assets/876d4d05-c2f3-42ff-afe3-4b0a6a245f5c)
 
