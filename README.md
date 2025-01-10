@@ -123,7 +123,7 @@
 
 ![image](https://github.com/user-attachments/assets/876d4d05-c2f3-42ff-afe3-4b0a6a245f5c)
 
-![image](https://github.com/user-attachments/assets/582e3c6a-7d53-4dd5-b3bd-95e014cdc611)
+![image](https://github.com/user-attachments/assets/aaa7c478-e6e8-4bd2-9b0e-66623ac1e6e6)
 
 - 주문 요청
 
