@@ -1,15 +1,14 @@
 package com.backendTask.task4.service;
 
-import com.backendTask.exception.CustomException;
-import com.backendTask.jwt.JwtUtil;
-import com.backendTask.task1.dto.ItemsDto;
-import com.backendTask.task1.dto.RestResponseDto;
+import com.backendTask.common.exception.CustomException;
+import com.backendTask.common.jwt.JwtUtil;
+import com.backendTask.common.dto.RestResponseDto;
 import com.backendTask.task2.repository.MemberRepository;
 import com.backendTask.task4.dto.PostsDto;
 import com.backendTask.task4.dto.QPostsDto_Response;
 import com.backendTask.task4.entity.Posts;
 import com.backendTask.task4.repository.PostsRepository;
-import com.backendTask.util.ValidationUtil;
+import com.backendTask.common.util.ValidationUtil;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -22,7 +21,7 @@ import org.springframework.validation.BindingResult;
 import java.util.List;
 import java.util.Optional;
 
-import static com.backendTask.exception.RestResponseCode.*;
+import static com.backendTask.common.exception.RestResponseCode.*;
 import static com.backendTask.task4.entity.QPosts.posts;
 
 @Service

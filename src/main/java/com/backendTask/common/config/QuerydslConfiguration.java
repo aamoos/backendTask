@@ -1,4 +1,4 @@
-package com.backendTask.config;
+package com.backendTask.common.config;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;

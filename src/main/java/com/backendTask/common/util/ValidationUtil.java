@@ -1,13 +1,12 @@
-package com.backendTask.util;
+package com.backendTask.common.util;
 
-import com.backendTask.task1.dto.RestResponseDto;
-import org.springframework.http.HttpStatus;
+import com.backendTask.common.dto.RestResponseDto;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 
 import java.util.stream.Collectors;
 
-import static com.backendTask.exception.RestResponseCode.BAD_REQUEST;
+import static com.backendTask.common.exception.RestResponseCode.BAD_REQUEST;
 
 public class ValidationUtil {
 

@@ -1,6 +1,6 @@
 package com.backendTask.task3.controller;
 
-import com.backendTask.task1.dto.RestResponseDto;
+import com.backendTask.common.dto.RestResponseDto;
 import com.backendTask.task3.dto.OrdersDto;
 import com.backendTask.task3.service.OrdersService;
 import jakarta.validation.Valid;

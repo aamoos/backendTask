@@ -1,9 +1,9 @@
-package com.backendTask.config;
+package com.backendTask.common.config;
 
-import com.backendTask.jwt.JwtAccessDeniedHandler;
-import com.backendTask.jwt.JwtAuthFilter;
-import com.backendTask.jwt.JwtAuthenticationEntryPoint;
-import com.backendTask.jwt.JwtUtil;
+import com.backendTask.common.jwt.JwtAccessDeniedHandler;
+import com.backendTask.common.jwt.JwtAuthFilter;
+import com.backendTask.common.jwt.JwtAuthenticationEntryPoint;
+import com.backendTask.common.jwt.JwtUtil;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;

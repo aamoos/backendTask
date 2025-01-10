@@ -1,4 +1,4 @@
-package com.backendTask.jwt;
+package com.backendTask.common.jwt;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

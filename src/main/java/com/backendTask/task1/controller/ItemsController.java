@@ -1,7 +1,7 @@
 package com.backendTask.task1.controller;
 
 import com.backendTask.task1.dto.ItemsDto;
-import com.backendTask.task1.dto.RestResponseDto;
+import com.backendTask.common.dto.RestResponseDto;
 import com.backendTask.task1.service.ItemsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

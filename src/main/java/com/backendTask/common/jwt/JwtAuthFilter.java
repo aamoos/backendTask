@@ -1,6 +1,6 @@
-package com.backendTask.jwt;
+package com.backendTask.common.jwt;
 
-import com.backendTask.config.CustomUserDetailsService;
+import com.backendTask.common.config.CustomUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

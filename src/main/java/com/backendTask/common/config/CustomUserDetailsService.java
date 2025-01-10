@@ -1,4 +1,4 @@
-package com.backendTask.config;
+package com.backendTask.common.config;
 
 import com.backendTask.task2.dto.CustomUserInfoDto;
 import com.backendTask.task2.entity.Member;

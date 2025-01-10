@@ -1,14 +1,14 @@
 package com.backendTask.task3.service;
 
-import com.backendTask.exception.CustomException;
-import com.backendTask.jwt.JwtUtil;
-import com.backendTask.task1.dto.RestResponseDto;
+import com.backendTask.common.exception.CustomException;
+import com.backendTask.common.jwt.JwtUtil;
+import com.backendTask.common.dto.RestResponseDto;
 import com.backendTask.task2.entity.Member;
 import com.backendTask.task2.repository.MemberRepository;
 import com.backendTask.task3.dto.OrdersDto;
 import com.backendTask.task3.entity.Orders;
 import com.backendTask.task3.repository.OrdersRepository;
-import com.backendTask.util.ValidationUtil;
+import com.backendTask.common.util.ValidationUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +17,7 @@ import org.springframework.validation.BindingResult;
 import java.util.List;
 import java.util.Optional;
 
-import static com.backendTask.exception.RestResponseCode.*;
+import static com.backendTask.common.exception.RestResponseCode.*;
 
 @Service
 @RequiredArgsConstructor

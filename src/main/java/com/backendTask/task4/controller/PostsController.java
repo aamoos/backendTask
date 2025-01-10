@@ -1,7 +1,6 @@
 package com.backendTask.task4.controller;
 
-import com.backendTask.task1.dto.ItemsDto;
-import com.backendTask.task1.dto.RestResponseDto;
+import com.backendTask.common.dto.RestResponseDto;
 import com.backendTask.task4.dto.PostsDto;
 import com.backendTask.task4.service.PostsService;
 import jakarta.validation.Valid;
@@ -12,8 +11,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor

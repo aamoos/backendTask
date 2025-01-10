@@ -1,4 +1,4 @@
-package com.backendTask.exception;
+package com.backendTask.common.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

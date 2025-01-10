@@ -1,7 +1,7 @@
-package com.backendTask.jwt;
+package com.backendTask.common.jwt;
 
-import com.backendTask.exception.CustomException;
-import com.backendTask.exception.RestResponseCode;
+import com.backendTask.common.exception.CustomException;
+import com.backendTask.common.exception.RestResponseCode;
 import com.backendTask.task2.dto.CustomUserInfoDto;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;

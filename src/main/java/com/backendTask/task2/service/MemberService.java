@@ -1,26 +1,24 @@
 package com.backendTask.task2.service;
 
-import com.backendTask.exception.CustomException;
-import com.backendTask.exception.RestResponseCode;
-import com.backendTask.jwt.JwtUtil;
-import com.backendTask.task1.dto.RestResponseDto;
+import com.backendTask.common.exception.CustomException;
+import com.backendTask.common.exception.RestResponseCode;
+import com.backendTask.common.jwt.JwtUtil;
+import com.backendTask.common.dto.RestResponseDto;
 import com.backendTask.task2.dto.CustomUserInfoDto;
 import com.backendTask.task2.dto.LoginDto;
 import com.backendTask.task2.dto.MemberDto;
 import com.backendTask.task2.entity.Member;
 import com.backendTask.task2.repository.MemberRepository;
-import com.backendTask.util.ValidationUtil;
+import com.backendTask.common.util.ValidationUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 
 import java.util.Optional;
-import java.util.stream.Collectors;
 
-import static com.backendTask.exception.RestResponseCode.*;
+import static com.backendTask.common.exception.RestResponseCode.*;
 
 @Service
 @RequiredArgsConstructor
