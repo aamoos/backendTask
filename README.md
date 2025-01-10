@@ -43,7 +43,11 @@
 
 ![image](https://github.com/user-attachments/assets/4cea9017-9c3e-4fbd-be11-2cc4a1aa13f3)
 
+- 아이템 수정
+
 ![image](https://github.com/user-attachments/assets/42b7dd08-4911-4074-8081-3d6d26a703c3)
+
+- 아이템 삭제
 
 ![image](https://github.com/user-attachments/assets/e348da43-658f-41fc-973a-ff93032bbe40)
 
@@ -64,24 +68,31 @@
 
 ## 정답:
 - 비밀번호는 안전하게 해시화하여 저장.
+
 ![image](https://github.com/user-attachments/assets/226e9171-52e3-4414-b375-41f60a2f0433)
 
 - JWT를 사용하여 인증.
+
 ![image](https://github.com/user-attachments/assets/87efe2b3-1e12-4a5f-9331-7ebd1ddda0b3)
 
 - 비밀번호는 최소 8자 이상, 대문자와 숫자를 포함해야 한다는 규칙을 검증.
+
 ![image](https://github.com/user-attachments/assets/f71cab40-0bdd-418b-82a5-3c0ef47dd83e)
 
 - 회원가입 정상적으로 요청시
+
 ![image](https://github.com/user-attachments/assets/00b66255-a99a-48a4-9c33-5fba2491e233)
 
 - 회원가입 요청시 중복회원
+
 ![image](https://github.com/user-attachments/assets/3a686d71-3e44-403f-b413-6d8dcee3e316)
 
 - 로그인 요청시 회원이 없을경우
+
 ![image](https://github.com/user-attachments/assets/ba1841da-d49a-400b-807c-3fcfdd2195f9)
 
 - 로그인한 사용자의 프로필 조회
+
 ![image](https://github.com/user-attachments/assets/fbba3a41-7452-4396-b305-ffc109178054)
 
 ---
