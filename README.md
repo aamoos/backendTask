@@ -57,8 +57,10 @@
 - 각 요청에 대한 유효성 검증 필수.
 
 ## 정답:
+- 비밀번호는 안전하게 해시화하여 저장.
 ![image](https://github.com/user-attachments/assets/226e9171-52e3-4414-b375-41f60a2f0433)
 
+- JWT를 사용하여 인증.
 ![image](https://github.com/user-attachments/assets/00b66255-a99a-48a4-9c33-5fba2491e233)
 
 ![image](https://github.com/user-attachments/assets/3a686d71-3e44-403f-b413-6d8dcee3e316)
