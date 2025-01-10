@@ -72,8 +72,10 @@
 - 회원가입 요청시 중복회원
 ![image](https://github.com/user-attachments/assets/3a686d71-3e44-403f-b413-6d8dcee3e316)
 
+- 로그인 요청시 회원이 없을경우
 ![image](https://github.com/user-attachments/assets/ba1841da-d49a-400b-807c-3fcfdd2195f9)
 
+- 로그인한 사용자의 프로필 조회
 ![image](https://github.com/user-attachments/assets/fbba3a41-7452-4396-b305-ffc109178054)
 
 ---
