@@ -166,8 +166,15 @@
 ## 정답:
 
 - 게시물 목록 조회
+- 게시물 페이징 목록 조회 부분은 보통 동적쿼리를 사용하기 떄문에 querydsl을 적용해서 구현하였습니다.
+- querydsl를 dto로 조회해올때 @QueryProjection 방식을 사용해서 조회되게 하였습니다.
 
 ![image](https://github.com/user-attachments/assets/7ca23f99-78f1-4ca7-a82a-684e0c8de5fa)
+
+![image](https://github.com/user-attachments/assets/14153b44-5558-43ad-b27c-2c2181dce3e2)
+
+![image](https://github.com/user-attachments/assets/df687e8b-f6ae-4750-8e1c-c963cc26765f)
+
 
 - 게시물 작성
  
