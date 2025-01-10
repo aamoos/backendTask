@@ -127,15 +127,15 @@
 
 ![image](https://github.com/user-attachments/assets/582e3c6a-7d53-4dd5-b3bd-95e014cdc611)
 
-- 주문 요청 api
+- 주문 요청
 
 ![image](https://github.com/user-attachments/assets/23e9363f-8d65-4299-98f7-5520c258ea00)
 
-- 주문 목록 조회 api
+- 주문 목록 조회
 
 ![image](https://github.com/user-attachments/assets/b5c73378-58f7-4f00-88c2-890190467d60)
 
-- 주문 수정 api
+- 주문 수정
 
 ![image](https://github.com/user-attachments/assets/d0c343fd-7f16-4065-8a25-e2b63d5589ef)
 
