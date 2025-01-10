@@ -63,6 +63,9 @@
 - JWT를 사용하여 인증.
 ![image](https://github.com/user-attachments/assets/87efe2b3-1e12-4a5f-9331-7ebd1ddda0b3)
 
+- 비밀번호는 최소 8자 이상, 대문자와 숫자를 포함해야 한다는 규칙을 검증.
+![image](https://github.com/user-attachments/assets/f71cab40-0bdd-418b-82a5-3c0ef47dd83e)
+
 ![image](https://github.com/user-attachments/assets/00b66255-a99a-48a4-9c33-5fba2491e233)
 
 ![image](https://github.com/user-attachments/assets/3a686d71-3e44-403f-b413-6d8dcee3e316)
