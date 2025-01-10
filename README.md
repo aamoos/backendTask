@@ -95,7 +95,7 @@
 
 ![image](https://github.com/user-attachments/assets/ba1841da-d49a-400b-807c-3fcfdd2195f9)
 
-- 로그인한 사용자의 프로필 조회
+- 사용자의 프로필 조회 (jwt Token을 Bearer Token에 넣어야됨)
 
 ![image](https://github.com/user-attachments/assets/fbba3a41-7452-4396-b305-ffc109178054)
 
