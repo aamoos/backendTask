@@ -145,12 +145,6 @@
 
 ![image](https://github.com/user-attachments/assets/5fceeeb5-1b80-4cf3-8d71-530d4a70a3fe)
 
-
-
-
-
-
-
 ---
 
 ## 과제 4: 간단한 게시판 시스템
@@ -168,6 +162,37 @@
 - 게시물은 제목, 내용, 작성자, 작성일을 포함.
 - 로그인한 사용자만 게시물을 작성, 수정, 삭제할 수 있도록 권한 관리.
 - 게시물 목록 조회 시 페이징 처리 구현.
+
+## 정답:
+
+- 게시물 목록 조회
+
+![image](https://github.com/user-attachments/assets/7ca23f99-78f1-4ca7-a82a-684e0c8de5fa)
+
+- 게시물 작성
+ 
+![image](https://github.com/user-attachments/assets/848f6814-7855-4972-a2aa-fb952e716e42)
+
+- 게시물 상세 조회
+
+![image](https://github.com/user-attachments/assets/95144447-5a30-4ddc-b6bb-58c4069da644)
+
+- 게시물 수정
+
+![image](https://github.com/user-attachments/assets/6a38aadd-0bdf-462a-a10e-b505ae2cbfb0)
+
+- 게시물 수정 후 확인
+
+![image](https://github.com/user-attachments/assets/512e2b5a-fd1c-4b41-bd94-869f0708e933)
+
+- 게시물 삭제
+
+![image](https://github.com/user-attachments/assets/32d461a4-0500-426e-825a-40e8c46cce8f)
+
+- 게시물 삭제후 확인
+
+![image](https://github.com/user-attachments/assets/f4457d9a-6d0b-4d6d-93e3-436f9f426f2d)
+
 
 ---
 
